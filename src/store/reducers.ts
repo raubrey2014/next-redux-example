@@ -15,12 +15,8 @@ const counterReducer = (state = 0, { type }: AnyAction) => {
   }
 };
 
-export interface StoreState {
-  lastUpdate: number;
-  light: boolean;
-}
 // INITIAL TIMER STATE
-const initialTimerState: StoreState = {
+const initialTimerState = {
   lastUpdate: 0,
   light: false,
 };
