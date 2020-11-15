@@ -1,6 +1,5 @@
 import { useSelector } from "react-redux";
 import Link from "next/link";
-import { StoreState } from "@/store/reducers";
 
 const codeStyle = {
   background: "#ebebeb",
@@ -11,7 +10,7 @@ const codeStyle = {
 };
 
 const ShowReduxState = () => {
-  const state = useSelector((state: StoreState) => state);
+  const state = useSelector((state: any) => state);
 
   return (
     <pre style={codeStyle}>
