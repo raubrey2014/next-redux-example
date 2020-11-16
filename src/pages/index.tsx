@@ -21,6 +21,9 @@ export default function Home() {
       <main>
         <h1>Welcome to Next with redux.</h1>
         <div>
+          <Link href="/image-test">Try the image optimization test</Link>
+        </div>
+        <div>
           <Link href="/posts/first-post">Check out the blog</Link>
         </div>
         <div>

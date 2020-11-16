@@ -15,9 +15,7 @@ const App: FC<Props> = ({ Component, pageProps }) => {
   return (
     <AnalyticsWrapper>
       <Provider store={store}>
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
+        <Component {...pageProps} />
       </Provider>
     </AnalyticsWrapper>
   );
