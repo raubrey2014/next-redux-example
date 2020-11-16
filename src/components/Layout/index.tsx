@@ -1,5 +1,5 @@
 import { FC } from "react";
-import styles from "./layout.module.css";
+import styles from "./index.module.css";
 
 const Layout: FC = ({ children }) => {
   return (

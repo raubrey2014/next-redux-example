@@ -8,6 +8,8 @@
     "start": "next start"
   },
   "dependencies": {
+    "@segment/snippet": "^4.13.1",
+    "classnames": "^2.2.6",
     "next": "^10.0.0",
     "react": "16.13.1",
     "react-dom": "16.13.1",
@@ -17,8 +19,10 @@
     "redux-thunk": "^2.3.0"
   },
   "devDependencies": {
+    "@types/classnames": "^2.2.11",
     "@types/node": "^14.14.7",
     "@types/react-redux": "^7.1.11",
+    "@types/segment-analytics": "0.0.33",
     "typescript": "^4.0.5"
   }
 }

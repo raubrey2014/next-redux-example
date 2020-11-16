@@ -1,0 +1,11 @@
+.flowItem {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  transition: opacity 0.5s;
+  opacity: 0;
+}
+
+.shown {
+  opacity: 1;
+}

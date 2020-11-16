@@ -1,7 +1,8 @@
 import { FC } from "react";
 import { Provider } from "react-redux";
 import { useStore } from "@/store";
-import Layout from "@/components/layout";
+import { AnalyticsWrapper } from "@/analytics";
+import Layout from "@/components/Layout";
 
 interface Props {
   Component: any;
@@ -12,11 +13,13 @@ const App: FC<Props> = ({ Component, pageProps }) => {
   const store = useStore(pageProps.initialReduxState);
 
   return (
-    <Provider store={store}>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
-    </Provider>
+    <AnalyticsWrapper>
+      <Provider store={store}>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </Provider>
+    </AnalyticsWrapper>
   );
 };
 
