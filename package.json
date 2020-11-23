@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@segment/snippet": "^4.13.1",
+    "@types/intercom-web": "^2.8.10",
     "classnames": "^2.2.6",
     "next": "^10.0.0",
     "react": "16.13.1",

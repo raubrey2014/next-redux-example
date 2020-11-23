@@ -15,7 +15,6 @@ export const page = () => window.analytics.page();
 
 export const track = (name: string, properties: any) => {
   window.analytics.track(name, properties);
-  console.log("tracking", name, "with", JSON.stringify(properties));
 };
 
 export const AnalyticsScriptTag = () => (
@@ -33,17 +32,9 @@ export const AnalyticsWrapper: FC = ({ children }) => {
   const router = useRouter();
 
   useEffect(() => {
-    const handleRouteChange = () => {
-      page();
-    };
+    router.events.on("routeChangeComplete", page);
 
-    router.events.on("routeChangeComplete", handleRouteChange);
-
-    // If the component is unmounted, unsubscribe
-    // from the event with the `off` method:
-    return () => {
-      router.events.off("routeChangeComplete", handleRouteChange);
-    };
+    return () => router.events.off("routeChangeComplete", page);
   }, []);
 
   return <>{children}</>;

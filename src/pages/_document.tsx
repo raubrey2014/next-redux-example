@@ -6,6 +6,7 @@ import Document, {
   DocumentContext,
 } from "next/document";
 import { AnalyticsScriptTag } from "@/analytics";
+import { ChatScriptTag } from "@/chat";
 
 class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
@@ -18,6 +19,7 @@ class MyDocument extends Document {
       <Html>
         <Head>
           <AnalyticsScriptTag />
+          <ChatScriptTag />
         </Head>
         <body>
           <Main />

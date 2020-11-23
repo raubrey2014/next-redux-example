@@ -2,7 +2,7 @@ import { FC } from "react";
 import { Provider } from "react-redux";
 import { useStore } from "@/store";
 import { AnalyticsWrapper } from "@/analytics";
-import Layout from "@/components/Layout";
+import { ChatWrapper } from "@/chat";
 
 interface Props {
   Component: any;
@@ -14,9 +14,11 @@ const App: FC<Props> = ({ Component, pageProps }) => {
 
   return (
     <AnalyticsWrapper>
-      <Provider store={store}>
-        <Component {...pageProps} />
-      </Provider>
+      <ChatWrapper>
+        <Provider store={store}>
+          <Component {...pageProps} />
+        </Provider>
+      </ChatWrapper>
     </AnalyticsWrapper>
   );
 };
